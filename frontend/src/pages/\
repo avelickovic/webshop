@@ -1,0 +1,58 @@
+
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import AppBar from '@mui/material/AppBar';
+import React from 'react';
+import Button from '@mui/material/Button';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { BrowserRouter, Routes, Route, iink as RouterLink } from 'react-router-dom';
+import Header from '../Header';
+import Footer from '../Footer';
+import {Grid ,Card,CardContent} from '@mui/material';
+//import 
+//{makeStyles} from '@mui/styles';
+/*const useStyles=makeStyles({
+	class1:{
+	//	backgroundColor:'cyan',
+		padding:"20px",
+	},
+});*/
+const theme=createTheme({
+	        palette: {
+			                    type: 'light',
+			                    primary: {
+						                                      main: '#54dcd8',
+						                                    },
+			                    secondary: {
+						                                      main: '#f50057',
+						                                    },
+			                  },
+})
+const Kartica=()=>{
+//	const classes=useStyles();
+  return(
+    <Grid item xs={1}>
+	  <Card>
+	    <CardContent> nesto </CardContent>
+	  </Card>
+    </Grid>
+  );};
+
+
+const Kupovina=()=> {
+  return (
+ <ThemeProvider theme={theme}>
+ <Header />
+	<Grid continer spacing={2} >
+	  {Kartica()}
+	  {Kartica()}
+	  {Kartica()}
+	  {Kartica()}
+	  
+	</Grid>
+
+
+ <Footer />
+ </ThemeProvider>
+);};
+export default Kupovina;
