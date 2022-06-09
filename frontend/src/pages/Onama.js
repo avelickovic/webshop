@@ -6,9 +6,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter, Routes, Route, iink as RouterLink } from 'react-router-dom';
-import Header from '../Header';
 import './Onama.css';
-import Footer from '../Footer';
 const theme=createTheme({
 	        palette: {
 			                    type: 'light',
@@ -26,7 +24,6 @@ const theme=createTheme({
 export default function Onama() {
   return (
  <ThemeProvider theme={theme}>
-  <Header />
 
    <h1 className='center'>O nama</h1>
     <div className='marg'>
@@ -36,6 +33,5 @@ export default function Onama() {
     Trudimo se da našim kupcima olakšamo kupovinu najviše moguće, za naše kupce biramo najkvlaitetnije proizvode po najnižim cenama.  
     </p>
     </div>
-   <Footer />
 </ThemeProvider>
 );};
